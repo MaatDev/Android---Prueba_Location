@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content" android:orientation="vertical" android:layout_gravity="center_horizontal">
+	<TextView android:layout_width="wrap_content" 
+		android:layout_height="wrap_content" 
+		android:layout_gravity="center_horizontal" 
+		android:layout_margin="5dip" 
+		android:textSize="20dip" 
+		android:text="Please enable GPS to use application"/>
+	<LinearLayout android:id="@+id/LinearLayout01" 
+	android:layout_width="wrap_content" 
+	android:layout_height="wrap_content" 
+	android:layout_gravity="center_horizontal" 
+	android:layout_margin="5dip">
+		<Button 
+		android:layout_height="wrap_content" 
+		android:id="@+id/btn_location_setting" 
+		android:text="Location settings" 
+		android:layout_width="130dip"/>
+		<Button 
+		android:layout_height="wrap_content" 
+		android:id="@+id/btn_location_cancel" 
+		android:text="Cancel" 
+		android:layout_width="130dip"/>
+	</LinearLayout>
+</LinearLayout>
