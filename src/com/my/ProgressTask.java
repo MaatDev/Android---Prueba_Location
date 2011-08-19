@@ -18,9 +18,18 @@ public class ProgressTask extends AsyncTask<Object, Boolean, String>{
 		Log.v(TAG,"Estoy en "+TAG+": Constructor");
 		this.context = context;
 		this.sensor = new SensorLocation(context);
+
+	}
+	
+	@Overrude
+	protected void onPreExecute(){
+		
 		this.dialog = new ProgressDialog(this.context);
 		this.dialog.setMessage("Please, wait...");
+		this.dialog.show();
+		
 	}
+	
 	
 	@Override
 	protected String doInBackground(Object... params) {
@@ -28,7 +37,7 @@ public class ProgressTask extends AsyncTask<Object, Boolean, String>{
 		Log.v(TAG,"Estoy en "+TAG+": doInBackground");
 		
 
-		publishProgress(true);	
+//		publishProgress(true);	
 		
 		
 		
@@ -42,12 +51,7 @@ public class ProgressTask extends AsyncTask<Object, Boolean, String>{
 		return null;
 	}
 	
-	
-	@Override
-	protected void onProgressUpdate(Boolean... values) {
-		dialog.show();
-	}
-	
+
 	@Override
 	protected void onPostExecute(String result) {
 		Log.v(TAG,"Estoy en "+TAG+": onPostExecute");
